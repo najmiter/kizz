@@ -1,0 +1,99 @@
+[
+    {
+        "question": "What is the capital of France?",
+        "options": ["Paris", "Berlin", "Rome", "London"],
+        "true_option": "Paris",
+        "difficulty": "easy",
+        "points": 5
+    },
+    {
+        "question": "Which of the following is a programming language?",
+        "options": ["HTML", "CSS", "JavaScript", "XML"],
+        "true_option": "JavaScript",
+        "difficulty": "easy",
+        "points": 5
+    },
+    {
+        "question": "What does HTML stand for?",
+        "options": [
+            "Hyper Text Markup Language",
+            "Hyperlinks and Text Markup Language",
+            "Home Tool Markup Language",
+            "Hyper Text Makeup Language"
+        ],
+        "true_option": "Hyper Text Markup Language",
+        "difficulty": "medium",
+        "points": 10
+    },
+    {
+        "question": "What is the output of 2 + 2 * 3?",
+        "options": ["6", "8", "10", "12"],
+        "true_option": "8",
+        "difficulty": "medium",
+        "points": 10
+    },
+    {
+        "question": "What does CSS stand for?",
+        "options": [
+            "Cascading Style Sheets",
+            "Colorful Style Sheets",
+            "Creative Style Sheets",
+            "Computer Style Sheets"
+        ],
+        "true_option": "Cascading Style Sheets",
+        "difficulty": "hard",
+        "points": 15
+    },
+    {
+        "question": "What is the correct syntax for a 'for' loop in Python?",
+        "options": [
+            "for i in range(5)",
+            "for i = 0; i < 5; i++",
+            "for (i = 0; i < 5; i++)",
+            "foreach (var i in range(5))"
+        ],
+        "true_option": "for i in range(5)",
+        "difficulty": "hard",
+        "points": 15
+    },
+    {
+        "question": "What is the result of 5 modulo 2?",
+        "options": ["1", "2", "0", "3"],
+        "true_option": "1",
+        "difficulty": "easy",
+        "points": 5
+    },
+    {
+        "question": "Which data type is used to represent a single character in Python?",
+        "options": ["char", "str", "int", "bool"],
+        "true_option": "str",
+        "difficulty": "easy",
+        "points": 5
+    },
+    {
+        "question": "What is the output of the following code snippet in JavaScript? \nconsole.log(2 + '2');",
+        "options": ["4", "22", "Error", "NaN"],
+        "true_option": "22",
+        "difficulty": "medium",
+        "points": 10
+    },
+    {
+        "question": "Which of the following is NOT a valid way to declare a variable in Python?",
+        "options": ["var x = 5", "x = 5", "x = int(5)", "x = 'hello'"],
+        "true_option": "var x = 5",
+        "difficulty": "medium",
+        "points": 10
+    },
+    {
+        "question": "What does SQL stand for?",
+        "options": [
+            "Structured Query Language",
+            "Sequential Query Language",
+            "Standardized Query Language",
+            "Structured Question Language"
+        ],
+        "true_option": "Structured Query Language",
+        "difficulty": "hard",
+        "points": 15
+    }
+]

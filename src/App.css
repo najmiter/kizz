@@ -14,10 +14,6 @@
     padding-block-start: 2rem;
 }
 
-/* [aria-disabled="true"]:hover {
-    cursor: no-drop;
-} */
-
 .header {
     text-align: center;
 }
@@ -62,18 +58,22 @@
     margin-block-start: 2rem;
 }
 
-.options-item {
+.options-item,
+.btn {
     font-size: clamp(1.2rem, 1.8vw, 1.5rem);
-    padding: clamp(1rem, 1.5vw, 1.4rem) 2rem;
     border: 1.5px solid var(--dark-color);
-    border-radius: 100vw;
+    padding: clamp(1rem, 1.5vw, 1.4rem) 2rem;
     cursor: pointer;
+    border-radius: 100vw;
     outline: none;
     background-color: transparent;
     color: var(--color);
-    text-align: left;
 
     transition: background-color 200ms ease;
+}
+
+.options-item {
+    text-align: left;
 }
 
 .options-item:disabled {
@@ -83,4 +83,40 @@
 
 .options-item:not(:disabled):hover {
     background-color: var(--dark-color);
+}
+
+
+.btn:hover {
+    background-color: transparent;
+}
+
+.btn,
+.timer:hover {
+    background-color: var(--dark-color);
+}
+
+.shoeser {
+    display: flex;
+    justify-content: space-between;
+    margin-block-start: 2rem;
+}
+
+.result {
+    font-size: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.obtained {
+    font-weight: bold;
+    font-size: 2em;
+    color: orangered;
+}
+
+.reset {
+    display: grid;
+    place-content: center;
+    margin-block-start: 2rem;
 }

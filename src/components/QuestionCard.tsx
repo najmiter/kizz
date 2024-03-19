@@ -2,16 +2,21 @@ import React from "react";
 import Question from "./Question";
 import Option from "./Option";
 
-export default function QuestionCard({ questions, dispatch, answer }) {
-    const current = questions.solved_count;
+export default function QuestionCard({
+    questions,
+    dispatch,
+    answer,
+    solved_count,
+}) {
+    console.log(solved_count);
 
     return (
         <>
-            <Question question={questions.at(current)} />
+            <Question question={questions.at(solved_count)} />
             <Option
                 dispatch={dispatch}
-                options={questions.at(current).options}
-                answered={answer !== null}
+                options={questions.at(solved_count).options}
+                answer={answer}
             />
         </>
     );

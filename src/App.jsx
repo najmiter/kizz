@@ -6,6 +6,8 @@ import "./App.css";
 import Progress from "./components/Progress";
 import QuestionCard from "./components/QuestionCard";
 import Loading from "./components/Loading";
+import Shoeser from "./components/Shoeser";
+import Result from "./components/Result";
 
 const initial_state = {
     questions: [],
@@ -21,10 +23,9 @@ function reducer(state, action) {
             return { ...state, questions: action.data, status: "ready" };
         case "data_failed":
             return { ...state, status: "failed" };
-        case "progress":
+        case "choose_opt":
             return {
                 ...state,
-                solved_count: state.solved_count + 1,
                 total_points_earned:
                     action.data ===
                     state.questions.at(state.solved_count).true_option
@@ -33,14 +34,35 @@ function reducer(state, action) {
                         : state.total_points_earned,
                 answer: action.data,
             };
+
+        case "next":
+            return {
+                ...state,
+                solved_count: state.solved_count + 1,
+                answer: null,
+            };
+
+        case "finish":
+            return {
+                ...state,
+                answer: null,
+                status: "finished",
+            };
+
+        case "reset":
+            return {
+                ...initial_state,
+                questions: state.questions,
+                status: "ready",
+            };
     }
 }
 
 function App() {
-    const [{ questions, status, answer, solved_count }, dispatch] = useReducer(
-        reducer,
-        initial_state
-    );
+    const [
+        { questions, status, answer, solved_count, total_points_earned },
+        dispatch,
+    ] = useReducer(reducer, initial_state);
 
     const total_questions = questions.length;
 
@@ -57,16 +79,41 @@ function App() {
         <>
             <Header />
             {status === "loading" && <Loading />}
-            {status === "ready" && (
-                <Main>
-                    <Progress value={solved_count} max={total_questions} />
-                    <QuestionCard
-                        questions={questions}
-                        dispatch={dispatch}
-                        answer={answer}
-                    />
-                </Main>
-            )}
+            <Main>
+                {status === "ready" && (
+                    <>
+                        <Progress value={solved_count} max={total_questions} />
+                        <QuestionCard
+                            questions={questions}
+                            solved_count={solved_count}
+                            dispatch={dispatch}
+                            answer={answer !== null}
+                        />
+                        {answer !== null && (
+                            <Shoeser
+                                dispatch={dispatch}
+                                is_last={solved_count === total_questions - 1}
+                            />
+                        )}
+                    </>
+                )}
+                {status === "finished" && (
+                    <>
+                        <Result
+                            total_points_earned={total_points_earned}
+                            questions={questions}
+                        />
+                        <div className="reset">
+                            <button
+                                className="btn"
+                                onClick={() => dispatch({ type: "reset" })}
+                            >
+                                Reset
+                            </button>
+                        </div>
+                    </>
+                )}
+            </Main>
         </>
     );
 }

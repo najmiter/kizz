@@ -5,8 +5,8 @@ export default function Option({ options, dispatch, answer }) {
         <div className="options">
             {options.map((option: string, idx: Number) => (
                 <button
-                    disabled={answer}
-                    className="options-item"
+                    disabled={answer !== null}
+                    className={`options-item ${answer === idx ? "selected" : ""}`}
                     key={option}
                     onClick={() => {
                         dispatch({ type: "choose_opt", data: idx });

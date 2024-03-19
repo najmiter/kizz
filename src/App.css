@@ -40,17 +40,19 @@
 }
 
 .progress-fill {
-    --fill-color: rgb(244, 106, 0);
+    --fill-color: orangered;
 
     height: var(--height);
     background-color: var(--fill-color);
-    box-shadow: 0 0 10px var(--fill-color);
+    box-shadow: 0 0 12px 2.5px var(--fill-color);
     border-radius: inherit;
     position: relative;
+
+    transition: width 500ms ease;
 }
 
 .progress-fill::after {
-    content: attr(aria-valuenow) '/' attr(aria-valuemax);
+    content: attr(aria-valuenow) ' / ' attr(aria-valuemax);
     position: absolute;
     font-size: 1.5em;
     top: 120%;
@@ -96,6 +98,10 @@
     background-color: var(--dark-color);
 }
 
+.selected {
+    background-color: var(--dark-color);
+}
+
 
 .btn:hover {
     background-color: transparent;
@@ -124,6 +130,15 @@
     font-weight: bold;
     font-size: 2em;
     color: orangered;
+}
+
+.danger {
+    color: orangered;
+}
+
+.timer {
+    font-family: monospace;
+    cursor: default;
 }
 
 .reset {

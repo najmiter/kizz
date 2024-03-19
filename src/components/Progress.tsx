@@ -6,13 +6,8 @@ export default function Progress({ value, max }) {
     };
 
     return (
-        <div className="progress">
-            <div
-                style={style}
-                className="progress-fill"
-                data-value={value + 1}
-                data-max={max}
-            ></div>
+        <div className="progress" data-value={value + 1} data-max={max}>
+            <div style={style} className="progress-fill"></div>
         </div>
     );
 }

@@ -37,6 +37,7 @@
     background-color: var(--dark-color);
     border-radius: var(--radius);
     margin-block-end: 3rem;
+    position: relative;
 }
 
 .progress-fill {
@@ -46,12 +47,11 @@
     background-color: var(--fill-color);
     box-shadow: 0 0 11px 2.5px var(--fill-color);
     border-radius: inherit;
-    position: relative;
 
     transition: width 500ms ease;
 }
 
-.progress-fill::after {
+.progress::after {
     content: attr(data-value) ' / ' attr(data-max);
     position: absolute;
     font-size: 1.5em;

@@ -6,13 +6,12 @@
 
 	color-scheme: dark;
 	color: rgba(255, 255, 255, 0.87);
-	background-color: #242424;
+	background-color: #1b1b1b;
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-
 }
 
 * {
@@ -22,6 +21,6 @@
 }
 
 h1 {
-	font-size: 3.2em;
+	font-size: 4.2rem;
 	line-height: 1.1;
 }

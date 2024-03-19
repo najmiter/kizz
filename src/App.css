@@ -52,7 +52,7 @@
 }
 
 .progress-fill::after {
-    content: attr(aria-valuenow) ' / ' attr(aria-valuemax);
+    content: attr(data-value) ' / ' attr(data-max);
     position: absolute;
     font-size: 1.5em;
     top: 120%;

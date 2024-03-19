@@ -10,8 +10,8 @@ export default function Progress({ value, max }) {
             <div
                 style={style}
                 className="progress-fill"
-                aria-valuenow={value + 1}
-                aria-valuemax={max}
+                data-value={value + 1}
+                data-max={max}
             ></div>
         </div>
     );

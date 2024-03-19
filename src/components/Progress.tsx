@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Progress({ value, max }) {
     const style = {
-        width: `${(value + 1 / max) * 100}%`,
+        width: `${(value / max) * 100}%`,
     };
 
     return (

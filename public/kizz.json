@@ -2,14 +2,14 @@
     {
         "question": "What is the capital of France?",
         "options": ["Paris", "Berlin", "Rome", "London"],
-        "true_option": "Paris",
+        "true_option": 0,
         "difficulty": "easy",
         "points": 5
     },
     {
         "question": "Which of the following is a programming language?",
         "options": ["HTML", "CSS", "JavaScript", "XML"],
-        "true_option": "JavaScript",
+        "true_option": 2,
         "difficulty": "easy",
         "points": 5
     },
@@ -21,14 +21,14 @@
             "Home Tool Markup Language",
             "Hyper Text Makeup Language"
         ],
-        "true_option": "Hyper Text Markup Language",
+        "true_option": 0,
         "difficulty": "medium",
         "points": 10
     },
     {
         "question": "What is the output of 2 + 2 * 3?",
         "options": ["6", "8", "10", "12"],
-        "true_option": "8",
+        "true_option": 1,
         "difficulty": "medium",
         "points": 10
     },
@@ -40,7 +40,7 @@
             "Creative Style Sheets",
             "Computer Style Sheets"
         ],
-        "true_option": "Cascading Style Sheets",
+        "true_option": 0,
         "difficulty": "hard",
         "points": 15
     },
@@ -52,35 +52,35 @@
             "for (i = 0; i < 5; i++)",
             "foreach (var i in range(5))"
         ],
-        "true_option": "for i in range(5)",
+        "true_option": 0,
         "difficulty": "hard",
         "points": 15
     },
     {
         "question": "What is the result of 5 modulo 2?",
         "options": ["1", "2", "0", "3"],
-        "true_option": "1",
+        "true_option": 0,
         "difficulty": "easy",
         "points": 5
     },
     {
         "question": "Which data type is used to represent a single character in Python?",
         "options": ["char", "str", "int", "bool"],
-        "true_option": "str",
+        "true_option": 1,
         "difficulty": "easy",
         "points": 5
     },
     {
         "question": "What is the output of the following code snippet in JavaScript? \nconsole.log(2 + '2');",
         "options": ["4", "22", "Error", "NaN"],
-        "true_option": "22",
+        "true_option": 1,
         "difficulty": "medium",
         "points": 10
     },
     {
         "question": "Which of the following is NOT a valid way to declare a variable in Python?",
         "options": ["var x = 5", "x = 5", "x = int(5)", "x = 'hello'"],
-        "true_option": "var x = 5",
+        "true_option": 0,
         "difficulty": "medium",
         "points": 10
     },
@@ -92,7 +92,7 @@
             "Standardized Query Language",
             "Structured Question Language"
         ],
-        "true_option": "Structured Query Language",
+        "true_option": 0,
         "difficulty": "hard",
         "points": 15
     }

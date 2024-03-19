@@ -14,6 +14,10 @@
     padding-block-start: 2rem;
 }
 
+/* [aria-disabled="true"]:hover {
+    cursor: no-drop;
+} */
+
 .header {
     text-align: center;
 }
@@ -55,19 +59,28 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    font-size: clamp(1.2rem, 2vw, 1.8rem);
     margin-block-start: 2rem;
 }
 
 .options-item {
+    font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+    padding: clamp(1rem, 1.5vw, 1.4rem) 2rem;
     border: 1.5px solid var(--dark-color);
     border-radius: 100vw;
-    padding: clamp(0.5rem, 1vw, 1rem) 2rem;
     cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    color: var(--color);
+    text-align: left;
 
     transition: background-color 200ms ease;
 }
 
-.options-item:hover {
+.options-item:disabled {
+    opacity: 0.6;
+    cursor: no-drop;
+}
+
+.options-item:not(:disabled):hover {
     background-color: var(--dark-color);
 }

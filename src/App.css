@@ -1,5 +1,6 @@
 :root {
     --dark-color: rgb(54, 56, 60);
+    --dhim-color: rgb(141, 143, 147);
 }
 
 #root {
@@ -45,6 +46,16 @@
     background-color: var(--fill-color);
     box-shadow: 0 0 10px var(--fill-color);
     border-radius: inherit;
+    position: relative;
+}
+
+.progress-fill::after {
+    content: attr(aria-valuenow) '/' attr(aria-valuemax);
+    position: absolute;
+    font-size: 1.5em;
+    top: 120%;
+    left: 0;
+    color: var(--dhim-color);
 }
 
 .question {

@@ -8,8 +8,6 @@ export default function QuestionCard({
     answer,
     solved_count,
 }) {
-    console.log(solved_count);
-
     return (
         <>
             <Question question={questions.at(solved_count)} />
